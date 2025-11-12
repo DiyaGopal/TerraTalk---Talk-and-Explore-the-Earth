@@ -60,3 +60,23 @@ npm install
 # Run the server
 node server.js
 # Your server should now be running on http://localhost:3011
+```
+
+### 1. Backend Setup
+
+First, set up and run the backend server:
+
+```bash
+# Navigate to the frontend folder
+cd terratalk
+
+# Install dependencies
+npm install
+
+# Build the app for production (recommended for PWA)
+npm run build
+
+# Preview the production build
+npm run preview
+# Your app should now be running on http://localhost:4173 (or similar)
+```
