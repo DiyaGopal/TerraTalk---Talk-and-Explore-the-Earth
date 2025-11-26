@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* --- Global Navbar Container --- */
+.navbar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* --- Menu Toggle Button (Hamburger/Close Icon) --- */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 150; /* Ensure it's always clickable */
+    padding: 5px;
+    font-family: 'Orbitron', sans-serif;
+    position: absolute; /* Position the toggle button explicitly */
+    top: 20px;
+    right: 40px;
+}
+
+/* --- Right Navigation (The Links Container) --- */
+.navbar-right {
+    /* ⭐ Initial position: Off-screen to the right (hidden) */
+    position: absolute;
+    top: 0; /* Align with the top edge */
+    right: 0; 
+    
+    /* Make the menu background visible when open */
+    background-color:rgba(20, 20, 20, 0.95);
+    
+    /* Vertical stacking properties */
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-end; /* Align link text to the right */
+    gap: 15px;
+    
+    padding: 60px 50px 50px 50px; /* Padding for visual space, extra on top for the toggle button */
+    
+    /* ⭐ The transition property for the slide-in/out effect */
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-out;
+    
+    /* Define size */
+    min-width: 150px; 
+    height: 100vh; /* Make it full height for a slide-out look */
+    pointer-events: none; /* Ignore pointer events when hidden */
+}
+
+/* --- State: When the 'open' class is applied (menu is visible) --- */
+.navbar-right.open {
+    transform: translateX(0); /* ⭐ Slides the menu fully into view */
+    pointer-events: auto;
+    right: 0; /* Enable pointer events when visible */
+}
+
+
+/* --- Styling for the Individual Links --- */
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: 'Orbitron', sans-serif;
+    transition: color 0.2s;
+    /* Ensure links take up the full width of the menu for better click targets */
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.navbar-right a:hover {
+    color: #2c84ff;
+}

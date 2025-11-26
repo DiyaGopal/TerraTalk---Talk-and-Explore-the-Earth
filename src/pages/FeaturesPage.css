@@ -1,0 +1,105 @@
+/* Features.css */
+/* This matches the dark theme of your app */
+
+.features-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0a0a1a; /* Dark blue/black bg */
+  color: #e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.features-sidebar {
+  width: 200px;
+  background: rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.features-sidebar a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.features-sidebar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.features-sidebar a.active {
+  background: #4d94ff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.features-content {
+  flex-grow: 1;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.features-content h1,
+.features-content h2,
+.features-content h3 {
+  color: #4d94ff;
+  text-shadow: 0 0 8px rgba(77, 148, 255, 0.5);
+  border-bottom: 1px solid rgba(77, 148, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.features-content h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.features-content h2 {
+  font-size: 2rem;
+  margin-top: 40px;
+}
+
+.features-content h3 {
+  font-size: 1.4rem;
+  border-bottom: none;
+  color: #99bbff;
+}
+
+.features-intro {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.command-category {
+  margin-bottom: 30px;
+}
+
+.commands-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.command-example {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-family: 'Consolas', 'Menlo', 'monospace';
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.command-example:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
